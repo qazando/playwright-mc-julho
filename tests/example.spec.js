@@ -4,7 +4,7 @@ const { test, expect } = require('@playwright/test');
 test('Cenário login com sucesso @login @smoke', async ({ page }) => {
   await page.goto('/login');
 
-  await page.locator('#user').fill('qazando@gmail.com');
+  await page.locator('#user').fill('qazando123@gmail.com');
   await page.locator('#password').fill('123456');
   await page.getByRole('button', { name: 'login' }).click();
   await expect(page.getByRole('heading', { name: 'Login realizado' })).toBeVisible();
